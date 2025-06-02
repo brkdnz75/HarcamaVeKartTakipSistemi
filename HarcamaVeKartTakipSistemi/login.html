@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Çoklu Kart Sistemi –Giriş Yap</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { min-height: 100vh; }
+    .login-page-bg {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 50%, #c7d2fe 100%);
+    }
+    .button-row {
+      display: flex;
+      gap: 0.7rem;
+      margin-top: 0.7rem;
+    }
+    .button-row button {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-page-bg">
+    <div class="login-box">
+      <h2>Çoklu Kart Sistemine Giriş Yap</h2>
+      <form id="login-form" autocomplete="off">
+        <input type="email" id="email" placeholder="E-posta" required>
+        <input type="password" id="password" placeholder="Şifre" required>
+        <div class="button-row">
+          <button type="submit">Giriş Yap</button>
+          <button type="button" id="register-btn" style="background:#8b5cf6;">Kayıt Ol</button>
+        </div>
+      </form>
+      <div id="login-error" style="color:#e74c3c; margin-top:1rem; font-weight:600; display:none;"></div>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>

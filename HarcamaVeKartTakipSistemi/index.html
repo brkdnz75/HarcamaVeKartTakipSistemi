@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Çoklu Kart Sistemi – Harcamalarını Kolayca Takip Et</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Çoklu Kart Sistemi – Harcamalarını Kolayca Takip Et</h1>
+    <nav>
+      <button id="nav-cards">Kartlarım</button>
+      <button id="nav-add-expense">Harcama Ekle</button>
+      <button id="nav-stats">İstatistikler</button>
+      <button id="dark-mode-toggle">🌙/☀️</button>
+    </nav>
+  </header>
+  <main>
+    <section id="login-section" style="display:none; justify-content:center; align-items:center; min-height:60vh;">
+      <div class="login-box">
+        <h2>Çoklu Kart Sistemine Giriş Yap</h2>
+        <button id="login-btn">Giriş Yap</button>
+      </div>
+    </section>
+    <section id="welcome-section" style="display:none;">
+      <span id="welcome-msg"></span>
+      <button id="logout-btn">Çıkış Yap</button>
+    </section>
+    <section id="cards-section">
+      <h2>Kartlarım</h2>
+      <form id="add-card-form">
+        <input type="text" id="card-name" placeholder="Kart Adı" required>
+        <input type="number" id="card-limit" placeholder="Kart Limiti" required>
+        <button type="submit">Kart Ekle</button>
+      </form>
+      <ul id="cards-list"></ul>
+    </section>
+    <section id="add-expense-section" style="display:none;">
+      <h2>Harcama Ekle</h2>
+      <form id="add-expense-form">
+        <select id="expense-card-select" required></select>
+        <input type="text" id="expense-desc" placeholder="Açıklama" required>
+        <input type="number" id="expense-amount" placeholder="Tutar" required>
+        <input type="text" id="expense-category" placeholder="Kategori (isteğe bağlı)">
+        <button type="submit">Harcama Ekle</button>
+      </form>
+      <ul id="expenses-list"></ul>
+    </section>
+    <section id="stats-section" style="display:none;">
+      <h2>İstatistikler</h2>
+      <div id="stats-content"></div>
+    </section>
+    <div id="error-msg" style="display:none;"></div>
+  </main>
+  <footer>
+    <p>Developed by Berke & Feyza</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
